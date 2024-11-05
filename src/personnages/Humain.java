@@ -1,5 +1,6 @@
 package personnages;
 
+
 public class Humain {
 	private String nom;
 	private String boissonFavorite;
@@ -39,30 +40,32 @@ public class Humain {
 	}
 	
 	public void parler(String texte) {
-		System.out.println(prendreParole() + " « " + texte + " » ");
+		System.out.println(prendreParole() + " ï¿½ " + texte + " ï¿½ ");
 	}
 	
 	private String prendreParole() {
 		return nom + " : ";
 	}
 	
-	private void gagnerArgent(int gain){
+	public void gagnerArgent(int gain){
 		argent += gain;
 	}
 	
-	private void perdreArgent(int gain){
-		argent -= gain;
+	public void perdreArgent(int perte){
+		argent -= perte;
 	}
 	
 	public void acheter(String bien, int prix){
 		if (prix>argent) {
-			parler("J'ai"+ argent + "sous en poche. Je ne peux même pas m'offir" + bien + "a"+ prix + "sous." );
+			parler("J'ai "+ argent + " sous en poche. Je ne peux mï¿½me pas m'offir" + bien + " a "+ prix + "sous." );
+			perdreArgent(prix);
 		}else {
-			parler("J'ai"+ argent + "sous en poche. Je vais pouvoir m'offir" + bien + "a"+ prix + "sous." );
+			parler("J'ai "+ argent + " sous en poche. Je vais pouvoir m'offir" + bien + " a "+ prix + " sous." );
 		}
 	}
-	
 }
+	
+	
 
 
 
@@ -70,4 +73,4 @@ public class Humain {
 
 
 
-//public class Coommerçant extends Humain{}
+//public class Coommerï¿½ant extends Humain{}
