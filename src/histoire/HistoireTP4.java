@@ -9,6 +9,6 @@ public class HistoireTP4 {
 		prof.acheter(" une boisson ", 12);
 		prof.boire("Kombucha");
 		prof.acheter(" un jeu ", 2);
-		prof.acheter(" un kimono ", 40);
+		prof.acheter(" un kimono ", 50);
 	}
 }
