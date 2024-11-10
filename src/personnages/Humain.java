@@ -7,7 +7,6 @@ public class Humain {
 	private int argent;
 	
 	public Humain(String nom, String boissonfavorite, int argent) {
-		super();
 		this.nom = nom;
 		this.boissonFavorite = boissonfavorite;
 		this.argent = argent;
@@ -44,7 +43,7 @@ public class Humain {
 	}
 	
 	private String prendreParole() {
-		return nom + " : ";
+		return "("+nom + ") - ";
 	}
 	
 	private void gagnerArgent(int gain){
@@ -57,9 +56,9 @@ public class Humain {
 	
 	public void acheter(String bien, int prix){
 		if (getArgent() < prix) {
-			parler("J'ai "+ argent + " sous en poche. Je ne peux m�me pas m'offir" + bien + " a "+ prix + " sous." );
+			parler("J'ai "+ argent + " sous en poche. Je ne peux m�me pas m'offir " + bien + " a "+ prix + " sous." );
 		}else {
-			parler("J'ai "+ argent + " sous en poche. Je vais pouvoir m'offir" + bien + " a "+ prix + " sous." );
+			parler("J'ai "+ argent + " sous en poche. Je vais pouvoir m'offir " + bien + " a "+ prix + " sous." );
 			perdreArgent(prix);
 		}
 	}
