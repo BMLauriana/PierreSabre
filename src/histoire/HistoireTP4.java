@@ -22,6 +22,7 @@ public class HistoireTP4 {
 		Yakuza Yaku = new Yakuza("Yaku Le Noir", "Whiski", 30, "Warsong" );
 		Yaku.direBonjour();
 		Yaku.extorquer(marco);
+		System.out.println(Yaku.getReputation());
 
 	}
 }

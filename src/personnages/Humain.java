@@ -61,6 +61,7 @@ public class Humain {
 			parler("J'ai "+ argent + " sous en poche. Je vais pouvoir m'offir " + bien + " a "+ prix + " sous." );
 			perdreArgent(prix);
 		}
+	
 	}
 }
 	
