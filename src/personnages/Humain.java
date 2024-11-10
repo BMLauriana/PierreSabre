@@ -46,11 +46,11 @@ public class Humain {
 		return "("+nom + ") - ";
 	}
 	
-	private void gagnerArgent(int gain){
+	protected void gagnerArgent(int gain){
 		argent += gain;
 	}
 	
-	private void perdreArgent(int perte){
+	protected void perdreArgent(int perte){
 		argent -= perte;
 	}
 	
